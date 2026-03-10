@@ -1,0 +1,1 @@
+# Small script to create all tables for the DB
