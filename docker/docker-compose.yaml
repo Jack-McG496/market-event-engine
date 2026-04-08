@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: event_engine_postgres
+    environment:
+      POSTGRES_USER: event_engine
+      POSTGRES_PASSWORD: event_engine
+      POSTGRES_DB: event_engine_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
